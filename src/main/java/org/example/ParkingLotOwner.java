@@ -29,5 +29,14 @@ class ParkingLotOwner implements ParkingLotListener {
     public void instructParkingAttendant(ParkingAttendant parkingAttendant) {
         parkingAttendant.parkCars();
     }
+
+    public void findMyCar(ParkingLot parkingLot, String licensePlate) {
+        Car foundCar = parkingLot.findCar(licensePlate);
+        if (foundCar != null) {
+            System.out.println(foundCar +" Driver found their car. Ready to go home.");
+        } else {
+            System.out.println("Driver couldn't find their car. Please check the license plate.");
+        }
+    }
 }
 

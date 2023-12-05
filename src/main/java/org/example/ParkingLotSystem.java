@@ -28,5 +28,7 @@ public class ParkingLotSystem {
         lot1.unParkCar(car1);
         lot2.unParkCar(car2);
         lot1.unParkCar(car3);
+
+        parkingLotOwner.findMyCar(lot1, "XYZ456");
     }
 }

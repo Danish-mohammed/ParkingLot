@@ -63,4 +63,15 @@ public class ParkingLot {
     public boolean hasSpaceAgain() {
         return !isFull();
     }
+
+    public Car findCar(String licensePlate) {
+        for (Car car : parkedCars) {
+            if (car.getLicensePlate().equals(licensePlate)) {
+                System.out.println("Car found: " + car.getLicensePlate());
+                return car;
+            }
+        }
+        System.out.println("Car not found with license plate: " + licensePlate);
+        return null;
+    }
 }
