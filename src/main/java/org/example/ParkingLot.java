@@ -24,4 +24,16 @@ public class ParkingLot {
             System.out.println("Parking lot is full. Unable to park the car.");
         }
     }
+
+    public boolean unParkCar(Car car) {
+        if (parkedCars.contains(car)) {
+            parkedCars.remove(car);
+            System.out.println(car.toString() +" unparked successfully.");
+            System.out.println("Driver unparked the car to go home.");
+            return true;
+        } else {
+            System.out.println("Car not found in the parking lot.");
+            return false;
+        }
+    }
 }

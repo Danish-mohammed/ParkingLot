@@ -12,5 +12,8 @@ public class ParkingLotSystem {
         // Park cars
         lot1.parkCar(car1);
         lot2.parkCar(car2);
+
+        lot1.unParkCar(car1);
+        lot2.unParkCar(car2);
     }
 }

@@ -3,6 +3,13 @@ package org.example;
 public class Car {
     private String licensePlate;
     private String make;
+
+    @Override
+    public String toString() {
+        return "Car" +
+                " licensePlate='" + licensePlate + '\'';
+    }
+
     private final Color color;
     private boolean isHandicap;
 
