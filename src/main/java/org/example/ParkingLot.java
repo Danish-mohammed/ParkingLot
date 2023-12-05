@@ -6,7 +6,6 @@ import java.util.List;
 public class ParkingLot {
     private int capacity;
     private List<Car> parkedCars;
-
     private List<ParkingLotListener> listeners;
 
     public ParkingLot(int capacity) {

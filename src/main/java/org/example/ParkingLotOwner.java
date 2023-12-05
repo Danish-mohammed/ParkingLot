@@ -25,5 +25,9 @@ class ParkingLotOwner implements ParkingLotListener {
             parkingLot.notifyListeners();
         }
     }
+
+    public void instructParkingAttendant(ParkingAttendant parkingAttendant) {
+        parkingAttendant.parkCars();
+    }
 }
 
