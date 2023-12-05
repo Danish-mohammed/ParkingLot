@@ -19,21 +19,27 @@ public class ParkingLot {
     public void parkCar(Car car) {
         if (!isFull()) {
             parkedCars.add(car);
-            System.out.println("Car parked successfully.");
+            System.out.println(car.toString() +" parked successfully.");
+            checkLotFull();
         } else {
             System.out.println("Parking lot is full. Unable to park the car.");
         }
     }
 
-    public boolean unParkCar(Car car) {
+    public void unParkCar(Car car) {
         if (parkedCars.contains(car)) {
             parkedCars.remove(car);
             System.out.println(car.toString() +" unparked successfully.");
             System.out.println("Driver unparked the car to go home.");
-            return true;
         } else {
             System.out.println("Car not found in the parking lot.");
-            return false;
         }
     }
+
+    private void checkLotFull() {
+        if (isFull()) {
+            System.out.println("Parking lot is now full. Please put out the full sign.");
+        }
+    }
+
 }
