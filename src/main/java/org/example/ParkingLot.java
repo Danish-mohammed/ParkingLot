@@ -49,10 +49,19 @@ public class ParkingLot {
         listeners.add(listener);
     }
 
-    private void notifyListeners() {
-        for (ParkingLotListener listener : listeners) {
-            listener.onParkingLotStatusChanged(this);
+    private boolean notifyingListeners = false;
+
+    public void notifyListeners() {
+        if (!notifyingListeners) {
+            notifyingListeners = true;
+            for (ParkingLotListener listener : listeners) {
+                listener.onParkingLotStatusChanged(this);
+            }
+            notifyingListeners = false;
         }
     }
 
+    public boolean hasSpaceAgain() {
+        return !isFull();
+    }
 }

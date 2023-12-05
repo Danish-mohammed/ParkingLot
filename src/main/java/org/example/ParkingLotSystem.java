@@ -3,7 +3,7 @@ package org.example;
 public class ParkingLotSystem {
     public static void main(String[] args) {
         // Create parking lots
-        ParkingLot lot1 = new ParkingLot(2);
+        ParkingLot lot1 = new ParkingLot(10);
         ParkingLot lot2 = new ParkingLot(2);
 
         // Create listeners
